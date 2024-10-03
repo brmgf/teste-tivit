@@ -1,0 +1,6 @@
+
+÷
+java:S1598"ÔThis file "ApiExceptionHandler.java" should be located in "org\tivit\domain\ExceptionHandler" directory, not in "C:\Users\mileg\IdeaProjects\Testes\teste-tivit\src\main\java\org\tivit\domain\ApiExceptionHandler".(Á•‹ÿÿÿÿÿ8î÷ı¤2
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Á•‹ÿÿÿÿÿ
+U
+java:S1611"3Remove the parentheses around the "error" parameter(ı£—Ôúÿÿÿÿ8‘¿ğı¤2
