@@ -2,7 +2,7 @@ package org.tivit.api.disassembler;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import org.tivit.api.controller.input.PautaInput;
+import org.tivit.api.input.PautaInput;
 import org.tivit.domain.model.Pauta;
 
 @RequiredArgsConstructor

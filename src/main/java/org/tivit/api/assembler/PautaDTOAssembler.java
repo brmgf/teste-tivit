@@ -1,7 +1,7 @@
 package org.tivit.api.assembler;
 
 import org.springframework.context.annotation.Configuration;
-import org.tivit.api.controller.dto.PautaDTO;
+import org.tivit.api.dto.PautaDTO;
 import org.tivit.domain.model.Pauta;
 
 import java.util.Collection;

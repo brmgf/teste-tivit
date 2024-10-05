@@ -1,4 +1,4 @@
-package org.tivit.api.controller.input;
+package org.tivit.api.input;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

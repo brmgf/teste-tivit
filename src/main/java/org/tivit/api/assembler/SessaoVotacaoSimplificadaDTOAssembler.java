@@ -1,7 +1,7 @@
 package org.tivit.api.assembler;
 
 import org.springframework.stereotype.Component;
-import org.tivit.api.controller.dto.SessaoVotacaoSimplificadaDTO;
+import org.tivit.api.dto.SessaoVotacaoSimplificadaDTO;
 import org.tivit.core.util.ConversorData;
 import org.tivit.domain.model.SessaoVotacao;
 

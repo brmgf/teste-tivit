@@ -2,7 +2,7 @@ package org.tivit.api.assembler;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import org.tivit.api.controller.dto.SessaoVotacaoPautaDTO;
+import org.tivit.api.dto.SessaoVotacaoPautaDTO;
 import org.tivit.domain.model.Pauta;
 import org.tivit.domain.model.SessaoVotacao;
 

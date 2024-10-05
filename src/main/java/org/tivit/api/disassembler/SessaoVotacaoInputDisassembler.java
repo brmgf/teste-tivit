@@ -1,7 +1,7 @@
 package org.tivit.api.disassembler;
 
 import org.springframework.stereotype.Component;
-import org.tivit.api.controller.input.SessaoVotacaoInput;
+import org.tivit.api.input.SessaoVotacaoInput;
 import org.tivit.domain.model.Pauta;
 import org.tivit.domain.model.SessaoVotacao;
 
