@@ -30,8 +30,8 @@ public class PautasController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public void cadastrar(@RequestBody @Valid PautaInput input) {
-        cadastroPautaService.cadastrar(dissassembler.toObjectModel(input));
+    public PautaDTO cadastrar(@RequestBody @Valid PautaInput input) {
+        return assembler.toDTO(cadastroPautaService.cadastrar(dissassembler.toObjectModel(input)));
     }
 
     @GetMapping

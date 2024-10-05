@@ -13,7 +13,7 @@ public class CadastroPautaService {
     private final PautaRepository repository;
 
     @Transactional
-    public void cadastrar(Pauta pauta) {
-        repository.save(pauta);
+    public Pauta cadastrar(Pauta pauta) {
+        return repository.save(pauta);
     }
 }
