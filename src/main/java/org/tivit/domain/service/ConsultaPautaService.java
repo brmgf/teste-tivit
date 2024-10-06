@@ -22,6 +22,7 @@ public class ConsultaPautaService {
 
     @Transactional(readOnly = true)
     public Pauta buscar(Long pautaId) {
-        return repository.findById(pautaId).orElseThrow(() -> new NegocioException("Pauta não encontrada."));
+        return repository.findById(pautaId)
+                .orElseThrow(() -> new NegocioException("Pauta não encontrada."));
     }
 }

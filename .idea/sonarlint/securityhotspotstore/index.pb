@@ -95,3 +95,11 @@ p
 @src/main/java/org/tivit/api/assembler/AssociadoDTOAssembler.java,a\a\aa3e823bf9544f7a10abd2b57e6be3a344190c1a
 t
 Dsrc/main/java/org/tivit/domain/service/ConsultaAssociadoService.java,e\f\ef51ef196709119ad6df65933ff804561b8c61d8
+`
+0src/main/java/org/tivit/api/input/VotoInput.java,1\8\1807b92e763fec7ef6196925d4762d2576677a4e
+s
+Csrc/main/java/org/tivit/api/disassembler/VotoInputDisassembler.java,a\9\a9112b0f19313f6e9bd7e00330aa0dfa9963e712
+j
+:src/main/java/org/tivit/domain/service/VotacaoService.java,7\c\7c013b64c996ca743e7d30e9be3c1bb933f03065
+m
+=src/main/java/org/tivit/domain/repository/VotoRepository.java,2\e\2e81ad231dcfe0d7ad1059d30081e233efa86fba

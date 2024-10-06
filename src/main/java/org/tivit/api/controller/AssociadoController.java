@@ -38,5 +38,4 @@ public class AssociadoController {
     public List<AssociadoDTO> listar() {
         return assembler.toCollectionDTO(consultaService.listar());
     }
-
 }
