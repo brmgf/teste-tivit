@@ -105,3 +105,9 @@ m
 =src/main/java/org/tivit/domain/repository/VotoRepository.java,2\e\2e81ad231dcfe0d7ad1059d30081e233efa86fba
 b
 2src/main/java/org/tivit/domain/model/TipoVoto.java,2\9\2941cd3eae764ffcb05f98290e92e94c1e75e7ae
+v
+Fsrc/main/java/org/tivit/api/controller/ResultadoVotacaoController.java,3\b\3b9df5d0f40be80d86db131cfcd40f87cc2ea235
+a
+1src/main/java/org/tivit/api/dto/ResultadoDTO.java,4\e\4e6d36bcedd57eab90cf9040a07bd7c851574354
+s
+Csrc/main/java/org/tivit/domain/service/ResultadoVotacaoService.java,c\b\cb86f69dd37bd0221e3c14f4f1273367be67a23e

@@ -23,7 +23,7 @@ public class VotacaoService {
     public void votar(VotoInput input, Long idSessao) {
         try {
             Voto voto = this.montarObjeto(input, idSessao);
-            this.validarVotoAssociado(voto.getAssociado().getId(), voto.getSessao().getId());
+            this.validarVotoAssociado(voto.getAssociado().getId(), voto.getSessao().getPauta().getId());
             repository.save(voto);
         } catch (NegocioException ex) {
             throw new NegocioException(ex.getMessage());
@@ -40,10 +40,10 @@ public class VotacaoService {
 
     private void validarVotoAssociado(Long associadoId, Long idSessao) {
         Optional<Voto> votoDoAssociadoNaSessao = repository
-                .findByAssociadoIdAndSessaoId(associadoId, idSessao);
+                .findByAssociadoIdAndPautaId(associadoId, idSessao);
 
         if (votoDoAssociadoNaSessao.isPresent()) {
-            throw new NegocioException("O associado já votou nessa sessão.");
+            throw new NegocioException("O associado já votou nessa pauta.");
         }
     }
 }

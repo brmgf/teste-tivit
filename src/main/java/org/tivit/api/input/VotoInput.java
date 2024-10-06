@@ -3,7 +3,6 @@ package org.tivit.api.input;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import org.tivit.domain.model.Voto;
 
 @Setter
 @Getter
