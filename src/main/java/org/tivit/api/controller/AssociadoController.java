@@ -29,7 +29,7 @@ public class AssociadoController {
     private final AssociadoDTOAssembler assembler;
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/cadastro")
+    @PostMapping
     public AssociadoDTO salvar(@RequestBody @Valid AssociadoInput input) {
         return assembler.toDTO(cadastroService.salvar(disassembler.toObjectModel(input)));
     }
