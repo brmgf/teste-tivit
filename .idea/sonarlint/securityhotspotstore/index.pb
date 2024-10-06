@@ -95,3 +95,5 @@ v
 Fsrc/main/java/org/tivit/api/controller/ResultadoVotacaoController.java,3\b\3b9df5d0f40be80d86db131cfcd40f87cc2ea235
 k
 ;src/main/java/org/tivit/api/controller/VotosController.java,e\e\ee38d1bda6c86b15d1a1c23a9285fbd5b679c7d3
+A
+system.properties,a\5\a5db35984da8ffa0e255c16a2e31ae7b26e7d222
