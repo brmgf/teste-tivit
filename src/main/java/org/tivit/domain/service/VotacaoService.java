@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.tivit.api.input.VotoInput;
 import org.tivit.domain.exception.NegocioException;
+import org.tivit.domain.model.TipoVoto;
 import org.tivit.domain.model.Voto;
 import org.tivit.domain.repository.VotoRepository;
 
@@ -33,7 +34,7 @@ public class VotacaoService {
         Voto voto = new Voto();
         voto.setSessao(sessoesAbertasService.buscarSessaoAbertaPorId(idSessao));
         voto.setAssociado(associadoService.buscar(input.getAssociadoId()));
-        voto.setTipoVoto(input.getTipoVoto());
+        voto.setTipoVoto(TipoVoto.fromDescricao(input.getTipoVoto()));
         return voto;
     }
 

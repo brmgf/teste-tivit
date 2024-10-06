@@ -14,6 +14,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.tivit.domain.exception.NegocioException;
 
 @Builder
 @NoArgsConstructor
@@ -40,8 +41,4 @@ public class Voto {
     @NotNull
     @Enumerated(EnumType.STRING)
     private TipoVoto tipoVoto;
-
-    public enum TipoVoto {
-        SIM, NAO;
-    }
 }

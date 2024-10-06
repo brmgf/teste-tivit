@@ -13,5 +13,5 @@ public class VotoInput {
     private Long associadoId;
 
     @NotNull(message = "Forneça um voto válido.")
-    private Voto.TipoVoto tipoVoto;
+    private String tipoVoto;
 }

@@ -103,3 +103,5 @@ j
 :src/main/java/org/tivit/domain/service/VotacaoService.java,7\c\7c013b64c996ca743e7d30e9be3c1bb933f03065
 m
 =src/main/java/org/tivit/domain/repository/VotoRepository.java,2\e\2e81ad231dcfe0d7ad1059d30081e233efa86fba
+b
+2src/main/java/org/tivit/domain/model/TipoVoto.java,2\9\2941cd3eae764ffcb05f98290e92e94c1e75e7ae
