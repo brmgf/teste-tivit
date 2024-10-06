@@ -5,31 +5,45 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.tivit.api.input.SessaoVotacaoInput;
 import org.tivit.api.disassembler.SessaoVotacaoInputDisassembler;
+import org.tivit.api.input.SessaoVotacaoInput;
 import org.tivit.core.util.ConversorData;
 import org.tivit.domain.exception.NegocioException;
 import org.tivit.domain.exceptionMessages.Messages;
+import org.tivit.domain.model.Pauta;
 import org.tivit.domain.model.SessaoVotacao;
 import org.tivit.domain.repository.SessaoVotacaoRepository;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
 @Service
 public class AbrirSessaoVotacaoService {
 
+    private final ConsultaPautaService consultaPautaService;
     private final SessaoVotacaoInputDisassembler disassembler;
     private final SessaoVotacaoRepository repository;
 
     @Transactional
     public SessaoVotacao salvarSessao(@Valid SessaoVotacaoInput input) {
+        this.validarSessaoAbertaParaPauta(input.getPautaId());
         SessaoVotacao sessaoVotacao = disassembler.toObjectModel(input);
         sessaoVotacao.setFim(this.getDataHoraFimSessaoVotacao(input.getFim()));
         return repository.save(sessaoVotacao);
+    }
+
+    private void validarSessaoAbertaParaPauta(Long idPauta) {
+        Pauta pauta = consultaPautaService.buscar(idPauta);
+        Optional<SessaoVotacao> sessaoVotacaoAberta = repository
+                .findSessaoAbertaByPautaId(pauta.getId(), LocalDateTime.now());
+
+        if (sessaoVotacaoAberta.isPresent()) {
+            throw new NegocioException("Já existe uma sessão aberta para essa pauta.");
+        }
     }
 
     private LocalDateTime getDataHoraFimSessaoVotacao(String fim) {
