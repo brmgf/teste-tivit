@@ -5,15 +5,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.tivit.domain.model.TipoVoto;
 
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
-public class ResultadoDTO {
+public class ResultadoVotacaoDTO {
 
-    private String descricaoPauta;
-    private int quantidadeVotosSim;
-    private int quantidadeVotosNao;
+    private TipoVoto tipoVoto;
+    private Long quantidade;
 }

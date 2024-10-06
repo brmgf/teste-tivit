@@ -111,3 +111,11 @@ a
 1src/main/java/org/tivit/api/dto/ResultadoDTO.java,4\e\4e6d36bcedd57eab90cf9040a07bd7c851574354
 s
 Csrc/main/java/org/tivit/domain/service/ResultadoVotacaoService.java,c\b\cb86f69dd37bd0221e3c14f4f1273367be67a23e
+y
+Isrc/main/java/org/tivit/domain/projection/ResultadoVotacaoProjection.java,3\2\32f26f6b179d9c71f0aedcb38ab595898855590d
+m
+=src/main/java/org/tivit/api/dto/ResultadoApresentacaoDTO.java,0\3\03c21b71d8870b3a16901ce394782d4f6e27d3b1
+h
+8src/main/java/org/tivit/api/dto/ResultadoVotacaoDTO.java,e\0\e0c9c84e65944bf10c7181090b473bbf3fa9ea88
+u
+Esrc/main/java/org/tivit/api/controller/ResultadoPautasController.java,2\3\234d827ac54c50d88f9703cfc63e9636f98a0c94

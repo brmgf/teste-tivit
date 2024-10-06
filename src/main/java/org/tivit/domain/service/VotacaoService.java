@@ -3,12 +3,14 @@ package org.tivit.domain.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.tivit.api.dto.ResultadoVotacaoDTO;
 import org.tivit.api.input.VotoInput;
 import org.tivit.domain.exception.NegocioException;
 import org.tivit.domain.model.TipoVoto;
 import org.tivit.domain.model.Voto;
 import org.tivit.domain.repository.VotoRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -45,5 +47,10 @@ public class VotacaoService {
         if (votoDoAssociadoNaSessao.isPresent()) {
             throw new NegocioException("O associado já votou nessa pauta.");
         }
+    }
+
+    @Transactional(readOnly = true)
+    public List<ResultadoVotacaoDTO> consultarResultadoPauta(Long pautaId) {
+        return repository.findResultadosVotacaoByPautaId(pautaId);
     }
 }
